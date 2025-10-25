@@ -1,2 +1,46 @@
 # Ignore node modules for frontend
 frontend/node_modules/
+
+# Java compiled files
+*.class
+**/*.class
+
+# Maven target directories
+backend/target/
+**/target/
+
+# IDE files
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.settings/
+.project
+.classpath
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Spring Boot
+.spring/
+spring.log
+
+# Application properties with secrets
+**/application-*.properties
+!**/application.properties
+!**/application-prod.properties
+
+# File upload directories
+adminStorage/
+airlinelogos/

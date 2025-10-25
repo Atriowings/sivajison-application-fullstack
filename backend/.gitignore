@@ -31,3 +31,64 @@
 
 # ### VS Code ###
 # .vscode/
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!.mvn/wrapper/maven-wrapper.properties
+
+# Compiled class files
+*.class
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+tmp/
+*.tmp
+*.bak
+*.swp
+
+# IntelliJ
+.idea/
+*.iml
+
+# Eclipse
+*.classpath
+*.project
+*.settings/
+.apt_generated/
+.factorypath
+.sts4-cache
+
+# NetBeans
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# VS Code
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# JEnv, JRebel, etc.
+.jenv/
+.rebel.xml
+
+# Spring Boot specific
+.spring/
+spring.log
+
+# Application properties with potential secrets
+# src/main/resources/application.properties
+# src/main/resources/application-local.properties
+# src/main/resources/application-*.properties
+
+# File upload/storage directories
+adminStorage/
+airlinelogos/
+
