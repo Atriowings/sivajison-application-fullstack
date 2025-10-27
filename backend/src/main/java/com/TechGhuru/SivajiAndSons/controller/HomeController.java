@@ -57,7 +57,24 @@ public class HomeController {
 	@Autowired
 	private TwilioService
 			twilioService;
-			
+	
+	// Health check endpoint to test if backend is running
+	@GetMapping("/health")
+	public ResponseEntity<String> healthCheck() {
+		return ResponseEntity.ok("Backend service is running successfully! Server is up and ready.");
+	}
+	
+	@GetMapping("/test")
+	public ResponseEntity<?> testApi() {
+		LocalDateTime now = LocalDateTime.now();
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+		String response = String.format(
+			"{\"status\":\"success\",\"message\":\"API is working correctly\",\"timestamp\":\"%s\",\"service\":\"SivajiAndSons Backend\",\"version\":\"1.0\"}",
+			now.format(formatter)
+		);
+		return ResponseEntity.ok(response);
+	}
+	
 	@GetMapping("/customer/hotel/{number}")
 	public List<CustomersHotelDetails> customerhotel(@PathVariable String number) {
 		return bookrepo.findByCustomernumberOrderByIdDesc(number);
